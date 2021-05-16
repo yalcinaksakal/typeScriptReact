@@ -1,6 +1,12 @@
 .item {
-    margin: 1rem 0;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    background-color: #f7f5ef;
-  }
+  margin: 1rem 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  background-color: #f7f5ef;
+  transition: all 0.2s ease-out;
+}
+
+.item:hover {
+  transform: scale(1.1);
+  background-color: rgb(251, 162, 152);
+}

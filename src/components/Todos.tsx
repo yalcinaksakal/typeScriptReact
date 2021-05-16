@@ -5,11 +5,18 @@ import styles from "./Todos.module.css";
 // const Todos: React.FC<{ items?: string[] }> = props => {
 
 // You can use your model class as a type
-const Todos: React.FC<{ items: Todo[] }> = props => {
+const Todos: React.FC<{
+  items: Todo[];
+  onDeleteTodo: (id: string) => void;
+}> = props => {
   return (
     <ul className={styles.todos}>
       {props.items.map(item => (
-        <TodoItem key={item.id} todo={item.text} />
+        <TodoItem
+          key={item.id}
+          todo={item.text}
+          clicked={props.onDeleteTodo.bind(null, item.id)}
+        />
       ))}
     </ul>
   );
