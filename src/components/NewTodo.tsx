@@ -11,7 +11,7 @@ const NewTodo: React.FC = () => {
     // const enteredText = inputRef.current?.value;
     const enteredText = inputRef.current!.value;
     if (enteredText.trim().length === 0) return;
-    inputRef.current.value="";
+    inputRef.current!.value="";
     addTodo(enteredText);
   };
   return (
